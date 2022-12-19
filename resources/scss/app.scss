@@ -1,1 +1,63 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+
+body{
+    background-color: black;
+}
+
+header{
+    h1{
+        border-bottom: 1px solid white;
+    }
+}
+
+
+
+.movie-card{
+    padding: 10px;
+
+    text-decoration: none;
+    color: white;
+
+    .movie-pic{
+        border-radius: 50%;
+        box-shadow: 2px 2px 4px 8px rgba(189, 189, 189, 0.2);
+        position: relative;
+        &:hover .layover{
+            width: 100%;
+        }
+        &:hover .layover span{
+            opacity: 1;
+        }
+        .layover{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0px;
+            height: 65px;
+            background-color: rgba(26, 35, 105, 0.8);
+            transition: width .8s ease-in-out;
+            color: white;
+            span{
+                width: 50px;
+                opacity: 0;
+                transition: opacity .5s ease-in-out;
+            }
+        }
+    }
+
+    .movie-title{
+        font-size: 1.8rem;
+    }
+}
+
+
+.movie-details{
+    padding: 100px;
+    color: white;
+    .title{
+        padding: 30px;
+        border-bottom: 1px solid white;
+        margin-bottom: 30px;
+    }
+}

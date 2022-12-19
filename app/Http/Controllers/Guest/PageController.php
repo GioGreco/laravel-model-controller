@@ -10,10 +10,12 @@ class PageController extends Controller
 {
     public function index(){
         $movies = Movie::all();
-        return view('home', compact('movies'));
+        return view('movie', compact('movies'));
     }
 
-    // public function show(){
-
-    // }
+    public function show($id){
+        $currentMovie = Movie::where('id', $id)->get();
+        $currentMovie->toArray();
+        return view('movieDetails', compact('currentMovie'));
+    }
 }
